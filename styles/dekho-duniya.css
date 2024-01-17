@@ -10,8 +10,9 @@
 nav{
     display: flex;
     justify-content: space-between;
+    max-width: 1170px;
     align-items: center;
-    margin: 40px 90px;
+    margin: 40px auto;
    
 }
 
@@ -28,6 +29,9 @@ nav li a{
     font-size: 1.125rem;
     font-weight: 400;
 
+}
+.hamburg{
+    display: none;
 }
 .site-name{
     display: flex;
@@ -47,22 +51,30 @@ nav li a{
     font-weight: 700;
 }
 /* banner style */
+.banner-parent{
+    background-image: url('../B9A2-Hero-Travel-main/Images/Group\ 13\ \(1\)\ \(1\).png'); 
+    border-radius: 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+    max-width: 1170px;
+    height: 500px;
+    margin:auto;
+
+
+}
 
 .banner{
     
-    background-image: url('../B9A2-Hero-Travel-main/Images/Group\ 13\ \(1\)\ \(1\).png'); 
-    background-repeat: no-repeat;
+    background: linear-gradient(180deg, rgba(19, 19, 24, 0.80) 0%, rgba(19, 19, 24, 0.00) 100%);
     border-radius: 16px;
-    width: 1170px;
-    height: 500px;
     display: flex;
+    width: 100%;
     justify-content: center;
     align-items: center;
-    margin:0 auto;
     flex-direction: column;
     text-align: center;
-    background-color: rgb(163, 150, 150);
-    background-blend-mode: multiply;
+    /* background-color: rgb(163, 150, 150);
+    background-blend-mode: multiply; */
     
 }
 .baner-title{
@@ -79,12 +91,12 @@ nav li a{
     margin-top:24px;
 }
 .banner-form{
-    display: inline-flex;
+    display: flex;
     padding: 16px;
     align-items: flex-start;
     gap: 24px;
-    background-color: #E2E5DE;
-    /* opacity: 0.3; */
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.30);
     margin-top: 45px;
   
 }
@@ -98,10 +110,28 @@ nav li a{
     padding: 15px;
     border: none;
     cursor:pointer;
+    width: 154px;
     margin-right: 24px;
 }
+.where-input{
+    border-radius: 8px;
+    background:#FFFFFF;
+    color: rgba(19, 19, 24, 0.50);
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 15px;
+    border: none;
+    cursor:pointer;
+    width: 124px;
+    margin-right: 24px;
+}
+.btn-parent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
 .banner-btn{
-padding: 15px 30px;
 border-radius: 8px;
 background: #FF5400;
 border: none;
@@ -109,13 +139,76 @@ cursor: pointer;
 color: #FFF;
 font-size: 1rem;
 font-weight: 700;
+width: 174px;
+height: 52px;
+
+}
+.banner-btn img{
+    width: 24px;
+    height: 24px;
 }
 
 
 /* media query */
 @media screen and (max-width:600px) {
-    .banner{
+    nav{
+        margin-bottom: 17px;
+        margin-top: 19px;
+    }
    
+    .site-name{
+        margin: 0;
+    }
+    .site-name img{
+        margin: 0;
+    }
+    .site-name h2{
+        font-size: 21.543px;
+    }
+    .nav-list{
+        display: none;
+    }
+    .hamburg{
+        display: inline-flex;
+        width: 24px;
+        height: 24px;
+    }
+    .banner-parent{
+        margin: 32px 17px;
+
+    }
+    .banner-form{
+        flex-direction: column;
+        margin: 32px 24px;
+        
+    }
+    .banner-input{
+        width: 255px;
+        margin-bottom: 16px;
+       
+    }
+    .where-input{
+        width: 225px;
+        margin-bottom: 16px;
+
+    }
+    .baner-title{
+        color: #FFF;
+        font-size: 22px;
+        font-weight: 800;
+        margin-top: 32px;
+    }
+    .banner-description{
+        color: #FFF;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 400;
+        width: 300px;
+
+    }
+    .banner-btn{
+        width: 255px;
+        height: 52px;
     }
     
 }
